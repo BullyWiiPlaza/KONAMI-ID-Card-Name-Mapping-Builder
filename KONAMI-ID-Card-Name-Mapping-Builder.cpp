@@ -123,6 +123,12 @@ int main()
 {
     spdlog::info("KONAMI ID -> Card Name Mapping Builder (C) 2023 by BullyWiiPlaza");
 
+#ifdef _DEBUG
+    spdlog::info("Debug Build");
+#else
+    spdlog::info("Release Build");
+#endif
+
     spdlog::stopwatch stopwatch;
 
     std::vector<card_id_mapping_t> card_id_mapping;
