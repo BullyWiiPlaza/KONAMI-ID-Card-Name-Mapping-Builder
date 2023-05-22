@@ -5,4 +5,4 @@ This C++ project allows you to build a KONAMI ID -> card name mapping based on t
 Load the project `*.sln` file in Visual Studio. Make sure you installed the required libraries annotated in the source code.
 
 ## Performance
-On my machine, the debug build takes about 14s to complete while the release build takes 3,4s so make sure to compile as release for good performance. Most of the performance is "wasted" on parsing the JSON in the debug build. In the release build, the downloading dominates the runtime with about 3s since the downloaded JSON is relatively big.
+On my machine, the debug build takes about 14s to complete while the release build takes 3.4s so make sure to compile as release for good performance. Most of the performance is "wasted" on parsing the JSON in the debug build. In the release build, the downloading dominates the runtime with about 3s since the downloaded JSON is relatively big.
