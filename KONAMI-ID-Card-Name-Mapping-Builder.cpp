@@ -121,6 +121,8 @@ constexpr auto include_negative_konami_ids = false;
 // TODO Currently not all KONAMI IDs are available in the ygoprodeck API, e.g. https://db.ygoprodeck.com/api/v7/cardinfo.php?misc=yes&name=Lucky%20Trinket
 int main()
 {
+    spdlog::info("KONAMI ID -> Card Name Mapping Builder (C) 2023 by BullyWiiPlaza");
+
     spdlog::stopwatch stopwatch;
 
     std::vector<card_id_mapping_t> card_id_mapping;
