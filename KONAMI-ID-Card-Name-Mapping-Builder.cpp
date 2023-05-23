@@ -14,6 +14,9 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/stopwatch.h>
 
+// vcpkg install boost:x64-windows
+#include <boost/algorithm/string/replace.hpp>
+
 /**
  * \brief Downloads file contents from the specified URL. Might throw an exception upon failure.
  * \param url The URL to download from.
@@ -55,21 +58,6 @@ struct card_id_mapping_t
     }
 };
 
-void replace_all(std::string& input, const std::string& from, const std::string& to)
-{
-    if (from.empty())
-    {
-	    return;
-    }
-
-    size_t start_position = 0;
-    while ((start_position = input.find(from, start_position)) != std::string::npos)
-    {
-        input.replace(start_position, from.length(), to);
-        start_position += to.length();
-    }
-}
-
 constexpr auto invalid_card_id = 0;
 
 std::string to_cpp_header(const std::vector<card_id_mapping_t> &card_id_mappings)
@@ -80,8 +68,7 @@ std::string to_cpp_header(const std::vector<card_id_mapping_t> &card_id_mappings
     size_t card_id_mapping_index = 0;
     for (const auto& [card_id, card_name] : card_id_mappings)
     {
-        std::string escaped_card_name = card_name;
-        replace_all(escaped_card_name, "\"", "\\\"");
+        const auto escaped_card_name = boost::replace_all_copy(card_name, "\"", "\\\"");
 
         header_file_contents += "\t";
 
