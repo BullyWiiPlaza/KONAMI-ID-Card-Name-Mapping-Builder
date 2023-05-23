@@ -105,7 +105,10 @@ void write_string_to_file(const std::filesystem::path& file_path, const std::str
 
 constexpr auto include_negative_konami_ids = false;
 
-// TODO Currently not all KONAMI IDs are available in the ygoprodeck API, e.g. https://db.ygoprodeck.com/api/v7/cardinfo.php?misc=yes&name=Lucky%20Trinket
+/*
+	Note: Currently not all KONAMI IDs are available in the ygoprodeck API, e.g. https://db.ygoprodeck.com/api/v7/cardinfo.php?misc=yes&name=Lucky%20Trinket
+	IDs are retrieved from the "official" KONAMI database: https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4189
+*/
 int main()
 {
     spdlog::info("KONAMI ID -> Card Name Mapping Builder (C) 2023 by BullyWiiPlaza");
