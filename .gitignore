@@ -363,4 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 /CardIdMapping.hpp
-/CardIdMapping.hpp
+
+/vcpkg_installed

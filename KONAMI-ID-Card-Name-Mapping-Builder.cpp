@@ -1,20 +1,12 @@
-// vcpkg install curlpp:x64-windows
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
 #include <curlpp/Options.hpp>
-
 #include <iosfwd>
 #include <sstream>
 #include <fstream>
-
-// vcpkg install nlohmann-json:x64-windows
 #include <nlohmann/json.hpp>
-
-// vcpkg install spdlog:x64-windows
 #include <spdlog/spdlog.h>
 #include <spdlog/stopwatch.h>
-
-// vcpkg install boost:x64-windows
 #include <boost/algorithm/string/replace.hpp>
 
 /**

@@ -1,0 +1,11 @@
+{
+	"$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+	"name": "konami-id-card-name-mapping-builder",
+	"version": "1.0.0",
+	"dependencies": [
+		"nlohmann-json",
+		"curlpp",
+		"spdlog",
+		"boost-algorithm"
+	]
+}
